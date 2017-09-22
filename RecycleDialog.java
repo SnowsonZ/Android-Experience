@@ -61,9 +61,7 @@ public class RecycleDialog extends Dialog implements OnClickListener {
         switch (view.getId()) {
             case R.id.btn_hide_input_method:
 				//隐藏输入法
-                InputMethodManager imm =
-                                (InputMethodManager) getContext().getSystemService(
-                                                Context.INPUT_METHOD_SERVICE);
+                InputMethodManager imm = (InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE);
                 if (imm.isActive()) {
                     imm.hideSoftInputFromWindow(getWindow().getDecorView().getWindowToken(), 0);
                 }
